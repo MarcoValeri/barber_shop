@@ -17,7 +17,7 @@ libraries:
 
 regions:
   header: Header
-  main: Main
+  content: Content
   footer: Footer
 
 # Hidden regions

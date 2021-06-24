@@ -1,73 +1,87 @@
-
-    <body>
-        <header class="portfolio-hero-header">
-            <img class="portfolio-hero-header-logo" src="{{ base_path ~ directory }}/images/barber-shop.jpg">
-            
-            <h1 class="portfolio-hero-header-h1">Barber Shop</h1>
-            <ul class="portfolio-hero-header-description">
-                <li>Haircut & Style</li>
-                <li>Skin Fade & Style</li>
-                <li>Wash cut and finish</li>
-            </ul>
-            <ul class="portfolio-hero-header-menu">
-                <li><a class="button primary" href="#">Home</a></li>
-                <li><a class="button primary" href="#">Price list</a></li>
-                <li><a class="button primary" href="#">Book now</a></li>
-            </ul>
-        </header>
-
-
-        <main class="main">
-            <div class="marketing-site-hero">
-            <div class="marketing-site-hero-content">
-                <h1>Book an appointment</h1>
-                <a href="#" class="round button">Book Now</a>
-            </div>
-            </div>
-        </main>
-        
-        <footer class="responsive-blog-footer">
-            <div class="row">
-                <div class="medium-8 columns small-order-2 medium-order-1 about-container">
-                <div class="row">
-                    <div class="hide-for-small-only medium-4 columns about-section">
-                    <img src="{{ base_path ~ directory }}/images/barber-shop.jpg">
-                    </div>
-                    <div class="medium-8 columns about-section">
-                    <h4>Barber Shop</h4>
-                    <p>paragraph about how amazing and awesome i am paragraph about how amazing and awesome i am paragraph about how amazing and awesome i am</p>
-                    <a href="">Read More</a>
-                    </div>
-                </div>
-                </div>
-                <div class="small-12 medium-4 columns small-order-1 medium-order-2 mailing-container">
-                <h4 class="mailing-list">Join my mailing list</h4>
-                <input type="text" placeholder="Email Address">
-                <a class="button expanded subscribe-button" href="#">Subscribe Now</a>
-                </div>
-            </div>
-            <div class="row tag-search">
-                <div class="columns">
-                <h4>Search by Tag</h4>
-                <ul class="menu simple tag-section">
-                    <li><a href="">barber</a></li>
-                    <li><a href="">hair</a></li>
-                    <li><a href="">cut</a></li>
-                    <li><a href="">haircut</a></li>
-                    <li><a href="">skin</a></li>
-                    <li><a href="">style</a></li>
-                    <li><a href="">top</a></li>
-                </ul>
-                </div>
-            </div>
-            <div class="row columns flex-container align-justify">
-                <p> all rights reserved</p>
-                <div class="up-arrow">
-                <a href="#top"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></a>
-                </div>
-            </div>
-            </footer>
+<header class="portfolio-hero-header">
+	<img class="portfolio-hero-header-logo" src="{{ base_path ~ directory }}/images/barber-shop.jpg"/>
+	<h1 class="portfolio-hero-header-h1">Barber Shop</h1>
+	<ul class="portfolio-hero-header-description">
+		<li>The Cut</li>
+		<li>The Beard</li>
+		<li>The Shave</li>
+	</ul>
+	<ul class="portfolio-hero-header-menu">
+		<li>
+			<a class="button primary" href="/barber_shop/web/">Home</a>
+		</li>
+		<li>
+			<a class="button primary" href="/barber_shop/web/about-us">About Us</a>
+		</li>
+		<li>
+			<a class="button primary" href="#">Price List</a>
+		</li>
+	</ul>
+	{{ page.header }}
+</header>
 
 
-    </body>
-</html>
+<main class="main">
+	<section class="content">
+		{{ page.content }}
+	</section>
+</main>
+
+<footer class="responsive-blog-footer">
+    {{ page.footer }}
+	<div class="row">
+		<div class="medium-8 columns small-order-2 medium-order-1 about-container">
+			<div class="row">
+				<div class="hide-for-small-only medium-4 columns about-section">
+					<img src="{{ base_path ~ directory }}/images/barber-shop.jpg">
+				</div>
+				<div class="medium-8 columns about-section">
+					<h4>About Barber Shop</h4>
+					<p>I am a person whose occupation is mainly to cut, dress, groom, style and shave men's and boys' hair or beards</p>
+					<a href="{{ base_path ~ directory }}/about-us">Read More</a>
+				</div>
+			</div>
+		</div>
+		<div class="small-12 medium-4 columns small-order-1 medium-order-2 mailing-container">
+			<h4 class="mailing-list">Join my mailing list</h4>
+			<input type="text" placeholder="Email Address">
+			<a class="button expanded subscribe-button" href="#">Subscribe Now</a>
+		</div>
+	</div>
+	<div class="row tag-search">
+		<div class="columns">
+			<h4>Search by Tag</h4>
+			<ul class="menu simple tag-section">
+				<li>
+					<a href="">barber</a>
+				</li>
+				<li>
+					<a href="">hair</a>
+				</li>
+				<li>
+					<a href="">cut</a>
+				</li>
+				<li>
+					<a href="">haircut</a>
+				</li>
+				<li>
+					<a href="">skin</a>
+				</li>
+				<li>
+					<a href="">style</a>
+				</li>
+				<li>
+					<a href="">top</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="row columns flex-container align-justify">
+		<p>&copy; {{ "now"|date("Y") }} - All rights reserved</p>
+		<div class="up-arrow">
+			<a href="#top">
+				<i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
+			</a>
+		</div>
+	</div>
+</footer>
