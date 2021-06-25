@@ -40,7 +40,12 @@
 	<section class="header-title-container">
 		<section class="header-title-container-title">
 			<h1 class="header-title-container-title-main">Barner Shop</h1>
-			<h4 class="header-title-container-title-sub">The Cut - The Beard - The Shave</h4>
+			{% set url = url('<current>') %}
+			{% if 'about-us' in url|render|render %}
+				<h4 class="header-title-container-title-sub">About us</h4>
+			{% else %}
+				<h4 class="header-title-container-title-sub">The Cut - The Beard - The Shave</h4>
+			{% endif %}
 		</section>
 	</section>
 </header>
