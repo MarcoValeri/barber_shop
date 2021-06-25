@@ -4,6 +4,7 @@ core: 8.x
 core_version_requirement: ^8 || ^9
 type: theme
 base theme: zurb_foundation
+screenshot: images/screenshot.png
 
 # Image appears on admin/appearance
 # screenshot: images/screenshot.jpg
