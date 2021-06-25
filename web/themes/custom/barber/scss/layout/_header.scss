@@ -112,3 +112,72 @@ $topbar-responsive-animation-type: fade-in; // or use slide-down or none
 /*
 * header-title-container
 */
+.header-title-container {
+  height: 80vh;
+  position: relative;
+  background: url('../images/barber_shop_old_school.jpg');
+  background-size: cover;
+  background-position: center;
+
+  .header-title-container-title {
+    width: 80%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+    text-align: center;
+    color: #fff;
+
+    h1,
+    h4 {
+      font-family: 'Lobster', cursive;
+    }
+
+    h1 {
+      font-size: 5rem;
+      font-weight: 700;
+    }
+
+    h4 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+
+  .header-title-container {
+    .header-title-container-title {
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      h4 {
+        font-size: 2rem;
+      }
+      
+    }
+  }
+
+}
+
+@media (max-width: 400px) {
+
+  .header-title-container {
+    .header-title-container-title {
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h4 {
+        font-size: 1.2rem;
+      }
+
+    }
+  }
+
+}
