@@ -1,6 +1,0 @@
-price_list_settings:
-  path: /price-list
-  defaults:
-    _controller: Drupal\price_list\Controller\PriceListController::content
-  requirements:
-    _permission: 'access content'

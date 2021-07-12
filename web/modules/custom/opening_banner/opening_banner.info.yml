@@ -1,0 +1,5 @@
+name: Opening Banner
+description: Banner that shows opening time
+type: module
+core_version_requirement: ^8 || ^9
+package: Custom
