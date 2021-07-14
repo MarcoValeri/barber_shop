@@ -19,11 +19,24 @@ use Drupal\Core\Access\AccessResult;
 class RSVPBlock extends BlockBase {
 
     /**
-     * @{@inheritdoc}
+     * {@inheritdoc}
      */
     
     public function build() {
-        return array('#markup' => $this->t('My RSVP List Block'));
+        return \Drupal::formBuilder()->getForm('Drupal\rsvplist\Form\RSVPForm');
+    }
+
+    public function blockAccess(AccountInterface $account) {
+        /** @var \Drupal\node\Entity\Node $node */
+        $node = \Drupal::routeMatch()->getParameter('node');
+
+        $nid = null;
+        if ($node) $nid = $node->id();
+
+        if (is_numeric($nid)) {
+            return AccessResult::allowedIfHasPermission($account, 'view rsvplist');
+        }
+        return AccessResult::forbidden();
     }
 
 }
