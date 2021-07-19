@@ -26,7 +26,22 @@
 
     .main-content {
       grid-area: main-content;
+      padding: 1rem;
       border: 1px solid #ff0000;
     }
+
+}
+
+/*
+* Set media query for screens max-width: max-width: 767px
+*/
+@media (max-width: 767px) {
+
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "main-time"
+    "main-content";
+  }
 
 }

@@ -18,24 +18,38 @@
 						<a href="{{ base_path }}about-us">About</a>
 					</li>
 					{# <li>
-						<button type="button" class="button hollow topbar-responsive-button">Categories</button>
-					</li> #}
+											<button type="button" class="button hollow topbar-responsive-button">Categories</button>
+										</li> #}
 				</ul>
 			</div>
 		</div>
 	</nav>
 
-	<section class="header-title-container">
-		<section class="header-title-container-title">
-			<h1 class="header-title-container-title-main">Barner Shop</h1>
+	{# <section class="header-title-container">
+			<section class="header-title-container-title">
+				<h1 class="header-title-container-title-main">Barner Shop</h1>
+				{% set url = url('<current>') %}
+				{% if 'about-us' in url|render|render %}
+					<h4 class="header-title-container-title-sub">About us</h4>
+				{% else %}
+					<h4 class="header-title-container-title-sub">The Cut - The Beard - The Shave</h4>
+				{% endif %}
+			</section>
+		</section> #}
+
+	<div class="hero-section">
+		<div class="hero-section-text">
+			<h1 class="hero-section-text-title-main">Barner Shop</h1>
 			{% set url = url('<current>') %}
 			{% if 'about-us' in url|render|render %}
-				<h4 class="header-title-container-title-sub">About us</h4>
+				<h4 class="hero-section-text-title-sub">About us</h4>
 			{% else %}
-				<h4 class="header-title-container-title-sub">The Cut - The Beard - The Shave</h4>
+				<h4 class="hero-section-text-title-sub">The Cut - The Beard - The Shave</h4>
 			{% endif %}
-		</section>
-	</section>
+		</div>
+	</div>
+
+
 </header>
 
 
@@ -44,7 +58,9 @@
 	<section class="main-time">
 		{% set today = "now"|date("l") %}
 		<ul>
-			<li><h2>Opening times</h2></li>
+			<li>
+				<h2>Opening times</h2>
+			</li>
 			<li class={{ today == "Monday" ? "main-time-mark" : "" }}>Monday: close</li>
 			<li class={{ today == "Tuesday" ? "main-time-mark" : "" }}>Tuesday: 8:00am - 8:00pm</li>
 			<li class={{ today == "Wednesday" ? "main-time-mark" : "" }}>Wednesday: 8:00am - 8:00pm</li>

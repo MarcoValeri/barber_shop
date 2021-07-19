@@ -1,184 +1,32 @@
-// START style by Foundation navbar
+$hero-height: 60vh;
 
-$topbar-responsive-bg: #2c3840;
-$topbar-responsive-animation-type: fade-in; // or use slide-down or none
-
-.topbar-responsive {
-  background: $topbar-responsive-bg;
-  padding: 1rem 1.5rem;
-
-  .topbar-responsive-logo {
-    color: $white;
-    vertical-align: middle;
-  }
-
-  .menu {
-    background: $topbar-responsive-bg;
-
-    li:last-of-type {
-      margin-right: 0;
-    }
-
-    a {
-      color: $white;
-      transition: color 0.15s ease-in;
-
-      &:hover {
-        color: lighten($topbar-responsive-bg, 60%);
-      }
-
-      @media screen and (max-width: 39.9375em) {
-        padding: 0.875rem 0;
-      }
-    }
-
-    .topbar-responsive-button {
-      color: $white;
-      border-color: $white;
-      border-radius: 5000px;
-      transition: color 0.15s ease-in, border-color 0.15s ease-in;
-
-      &:hover {
-        color: lighten($topbar-responsive-bg, 60%);
-        border-color: lighten($topbar-responsive-bg, 60%);
-      }
-
-      @media screen and (max-width: 39.9375em) {
-        width: 100%;
-        margin: 0.875rem 0;
-      }
-    }
-  }
-
-   @media screen and (max-width: 39.9375em) {
-     padding: 0.75rem;
-
-    .top-bar-title {
-      position: relative;
-      width: 100%;
-
-      span {
-        position: absolute;
-        right: 0;
-        border: 1px solid $white;
-        border-radius: 5px;
-        padding: 0.25rem 0.45rem;
-        top: 50%;
-        transform: translateY(-50%);
-
-        .menu-icon {
-          margin-bottom: 4px;
-        }
-      }
-    }
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity:0;
-  } to {
-    opacity:1;
-  }
-}
-
-@keyframes slideDown {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
-
-@include breakpoint(small only) {
-  .topbar-responsive-links {
-    animation-fill-mode: both;
-    animation-duration: 0.5s;
-    width: 100%;
-
-    @if $topbar-responsive-animation-type == slide-down {
-      animation: slideDown 1s ease-in;
-    } @else if $topbar-responsive-animation-type == fade-in {
-      animation: fadeIn 1s ease-in;
-    } @else {
-      animation: none;
-    }
-  }
-}
-
-// END style by Foundation navbar
-
-/*
-* header-title-container
-*/
-.header-title-container {
-  height: 80vh;
-  position: relative;
-  background: url('../images/barber_shop_old_school.jpg');
+.hero-section {
+  background: url('http://localhost/barber_shop/web/themes/custom/barber/images/barber_shop_old_school.jpg') 50% no-repeat;
   background-size: cover;
-  background-position: center;
+  height: $hero-height;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  .header-title-container-title {
-    width: 80%;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 1rem;
-    text-align: center;
-    color: #fff;
-    opacity: 0.6;
+  .hero-section-text {
+    color: $white;
+    text-shadow: 1px 1px 2px $black;
 
-    h1,
-    h4 {
+    .hero-section-text-title-main,
+    .hero-section-text-title-sub {
       font-family: 'Lobster', cursive;
     }
 
-    h1 {
-      font-size: 5rem;
-      font-weight: 700;
+    .hero-section-text-title-main {
+      font-size: 4rem;
     }
-
-    h4 {
+  
+    .hero-section-text-title-sub {
       font-size: 3rem;
-      font-weight: 700;
     }
-  }
-}
 
-@media (max-width: 1024px) {
-
-  .header-title-container {
-    .header-title-container-title {
-
-      h1 {
-        font-size: 3rem;
-      }
-
-      h4 {
-        font-size: 2rem;
-      }
-      
-    }
   }
 
 }
 
-@media (max-width: 400px) {
-
-  .header-title-container {
-    .header-title-container-title {
-
-      h1 {
-        font-size: 2rem;
-      }
-
-      h4 {
-        font-size: 1.2rem;
-      }
-
-    }
-  }
-
-}
