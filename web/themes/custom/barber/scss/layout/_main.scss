@@ -1,42 +1,32 @@
-$marketing-site-hero-height: 65vh;
+.main {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas:
+    "main-time main-content";
 
-.marketing-site-hero {
-  background: url('../images/hair-cut.jpg') top right no-repeat;
-  height: $marketing-site-hero-height;
-  background-size: cover;
-  display: flex;
-  align-items: center;
+    .main-time {
+      grid-area: main-time;
+      padding: 1px;
+      text-align: center;
+      border: 1px solid #ff0000;
 
-  @media screen and (min-width: 40em) {
-    background-position: center center;
-  }
+      ul {
+
+        .main-time-mark {
+          font-weight: 900;
+        }
+
+        li {
+          list-style: none;
+        }
+
+      }
+
+    }
+
+    .main-content {
+      grid-area: main-content;
+      border: 1px solid #ff0000;
+    }
+
 }
-
-.marketing-site-hero-content {
-  max-width: $global-width;
-  margin: 0 auto;
-  padding-left: 5%;
-  padding-right: 5%;
-
-  h1 {
-    font-size: 32px;
-    color: #064e7e;
-  }
-
-  .subheader {
-      color: rgb(255, 255, 255);
-      font-weight: 700;
-  }
-
-  .button.round {
-    border-radius: 5000px;
-    text-transform: uppercase;
-    font-size: 12px;
-    margin-bottom: 0;
-  }
-
-  @media screen and (min-width: 40em) {
-    padding-left: 50%;
-  }
-}
-

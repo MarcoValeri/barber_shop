@@ -40,9 +40,25 @@
 
 
 <main class="main">
-	<section class="content">
+
+	<section class="main-time">
+		{% set today = "now"|date("l") %}
+		<ul>
+			<li><h2>Opening times</h2></li>
+			<li class={{ today == "Monday" ? "main-time-mark" : "" }}>Monday: close</li>
+			<li class={{ today == "Tuesday" ? "main-time-mark" : "" }}>Tuesday: 8:00am - 8:00pm</li>
+			<li class={{ today == "Wednesday" ? "main-time-mark" : "" }}>Wednesday: 8:00am - 8:00pm</li>
+			<li class={{ today == "Thursday" ? "main-time-mark" : "" }}>Thursday: 8:00am - 8:00pm</li>
+			<li class={{ today == "Friday" ? "main-time-mark" : "" }}>Friday: 8:00am - 8:00pm</li>
+			<li class={{ today == "Saturday" ? "main-time-mark" : "" }}>Saturday: 8:00am - 8:00pm</li>
+			<li class={{ today == "Sunday" ? "main-time-mark" : "" }}>Sunday: 8:00am - 6:00pm</li>
+		</ul>
+	</section>
+
+	<section class="main-content">
 		{{ page.content }}
 	</section>
+
 </main>
 
 <footer class="responsive-blog-footer">
