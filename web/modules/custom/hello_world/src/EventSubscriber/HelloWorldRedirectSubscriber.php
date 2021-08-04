@@ -11,6 +11,8 @@ use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 
 /**
+ * Event subscriber for redirecting to the homepage.
+ *
  * Subscribes to the Kernel Request event and redirects to the homepage
  * when the user has the "non_grata" role.
  */

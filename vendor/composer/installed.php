@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '1efd9d653f630e5d0d1ea696d807f218bf5199ab',
+        'reference' => 'b81a98e6a2d2b86053369bceb3ecd2e750517980',
         'name' => 'drupal/recommended-project',
         'dev' => true,
     ),
@@ -697,7 +697,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '1efd9d653f630e5d0d1ea696d807f218bf5199ab',
+            'reference' => 'b81a98e6a2d2b86053369bceb3ecd2e750517980',
             'dev_requirement' => false,
         ),
         'drupal/responsive_image' => array(
