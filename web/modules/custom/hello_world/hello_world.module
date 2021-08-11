@@ -41,3 +41,48 @@ function hello_world_mail($key, &$message, $params) {
     }
 
 }
+
+/**
+ * Implements hook_token_info().
+ */
+function hello_world_token_info() {
+
+    $type = [
+        'name' => t('Hello World'),
+        'description' => t('Tokens related to the Hello World module.'),
+    ];
+
+    $tokens['salutation'] = [
+        'name' => t('Salutation'),
+        'description' => t('The Hello World salutation value.'),
+    ];
+
+    return [
+        'types' => ['hello_world' => $type],
+        'tokens' => ['hello_world' => $tokens],
+    ];
+
+}
+
+/**
+ * Implements hoot_tokens().
+ */
+function hello_world_tokens($type, $tokens, array $data, array $options, \Drupal\Core\Render\BubbleableMetadata $bubbleable_metadata) {
+
+    $replacements = [];
+
+    if ($type == 'hello_world') {
+        foreach ($tokens as $name => $original) {
+            switch($name) {
+                case 'salutation':
+                    $replacements[$original] = \Drupal::service('hello_world.salutation')->getSalutation();
+                    $config = \Drupal::config('hello_world.custom_salutation');
+                    $bubbleable_metadata->addCacheableDependency($config);
+                    break;
+            }
+        }
+    }
+
+    return $replacements;
+
+}
